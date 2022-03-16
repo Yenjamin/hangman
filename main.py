@@ -17,6 +17,7 @@ def main():
     while play_game not in ["y", "n"]:
         play_game = input("Do you want to play again? y = yes, n = no \n").lower()
     if play_game == "y":
+        word = ""
         main()
     elif play_game == "n":
         print("Thank you for playing")

@@ -1,6 +1,14 @@
 import time
 
 def main_game_loop(word, display, count, length, already_guessed, limit):
+    if "-" in word:
+        i = word.count("-")
+        while i != 0:
+            index = word.find("-")
+            word = word[:index] + "_" + word[index + 1:]
+            display = display[:index] + "-" + display[index + 1:]
+            print(display + "\n")
+            i = i - 1
     print(already_guessed)
     guess = input("This is the Hangman Word: " + display + " Enter your guess: \n")
     guess = guess.strip()
