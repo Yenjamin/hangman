@@ -30,6 +30,16 @@ def main_game_loop(word, display, count, length, already_guessed, limit):
             display = display[:index] + guess + display[index + 1:]
             print(display + "\n")
             i = i - 1
+        if guess.upper() in word:
+            t = guess.upper()
+            already_guessed.extend([guess])
+            i = word.count(t)
+            while i != 0:
+                index = word.find(t)
+                word = word[:index] + "_" + word[index + 1:]
+                display = display[:index] + t + display[index + 1:]
+                print(display + "\n")
+                i = i - 1
     else:
         already_guessed.extend([guess])
         count += 1

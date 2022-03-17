@@ -3,7 +3,9 @@ from random_word import RandomWords
 from loop import main_game_loop
 
 def main():
-    word = RandomWords().get_random_word()
+    #word = RandomWords().get_random_word()
+    word ="Arizona"
+    # if there's no internet to get words, make a default list of words
     word2 = word
     length = len(word)
     count = 0
@@ -17,7 +19,6 @@ def main():
     while play_game not in ["y", "n"]:
         play_game = input("Do you want to play again? y = yes, n = no \n").lower()
     if play_game == "y":
-        word = ""
         main()
     elif play_game == "n":
         print("Thank you for playing")
