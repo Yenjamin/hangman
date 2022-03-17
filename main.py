@@ -1,10 +1,16 @@
 import time
 from random_word import RandomWords
 from loop import main_game_loop
+import random
 
 def main():
-    word = RandomWords().get_random_word()
-    # if there's no internet to get words, make a default list of words
+    words = ["assessment", "extraterrestrial", "raise", "secular", "potential", "disturbance", "nature", "definite", "superintendent", "round", "offline"]
+    try:
+        word = RandomWords().get_random_word()
+        if word == None:
+            word = random.choice(words)
+    except:
+        word = random.choice(words)
     word2 = word
     length = len(word)
     count = 0
