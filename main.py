@@ -3,8 +3,7 @@ from random_word import RandomWords
 from loop import main_game_loop
 
 def main():
-    #word = RandomWords().get_random_word()
-    word ="Arizona"
+    word = RandomWords().get_random_word()
     # if there's no internet to get words, make a default list of words
     word2 = word
     length = len(word)
